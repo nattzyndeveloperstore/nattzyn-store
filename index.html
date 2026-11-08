@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
@@ -7,8 +7,9 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
 body{background:#07070a;color:#fff;padding-bottom:110px;overflow-x:hidden}
+@keyframes gradMove{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 .grad-text{background:linear-gradient(90deg,#ff1e2d,#3b82f6,#ffffff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.grad-btn{background:linear-gradient(135deg,#ff1e2d 0%,#3b82f6 55%,#ffffff 130%);color:#fff;border:none;box-shadow:0 0 18px rgba(59,130,246,.5)}
+.grad-btn{background:linear-gradient(270deg,#ff1e2d,#3b82f6,#ffffff,#ff1e2d);background-size:300% 300%;animation:gradMove 3s ease infinite;color:#fff;border:none;box-shadow:0 0 18px rgba(59,130,246,.5)}
 .bg-overlay{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(600px 300px at 15% -50px, rgba(255,30,45,.45), transparent 60%),radial-gradient(500px 300px at 90% 20%, rgba(59,130,246,.35), transparent 60%),radial-gradient(600px 400px at 50% 90%, rgba(255,30,45,.18), transparent 60%)}
 .bg-grid{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.07;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:40px 40px}
 .orb{position:fixed;border-radius:50%;filter:blur(60px);opacity:.5;pointer-events:none;z-index:0;animation:float 6s ease-in-out infinite}
@@ -21,12 +22,12 @@ body{background:#07070a;color:#fff;padding-bottom:110px;overflow-x:hidden}
 .burger{font-size:22px;background:rgba(255,255,255,.1);border:1px solid #333;width:38px;height:38px;border-radius:10px;color:#fff;cursor:pointer}
 .top b{font-size:15px;letter-spacing:1px}
 .top b i{font-style:normal;background:linear-gradient(90deg,#ff1e2d,#3b82f6,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.top span{font-size:11px;background:linear-gradient(90deg,#ff1e2d,#3b82f6);padding:5px 10px;border-radius:999px;font-weight:900}
-.user-ava{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#ff1e2d,#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;border:2px solid #fff}
+.top span{font-size:11px;background:linear-gradient(270deg,#ff1e2d,#3b82f6,#ff1e2d);background-size:200% 200%;animation:gradMove 3s ease infinite;padding:5px 10px;border-radius:999px;font-weight:900}
+.user-ava{width:32px;height:32px;border-radius:50%;background:linear-gradient(270deg,#ff1e2d,#3b82f6,#ff1e2d);background-size:200% 200%;animation:gradMove 3s ease infinite;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;border:2px solid #fff}
 .marquee-wrap{margin:12px 16px 0;background:#111118;border:1px solid #2b2b35;border-radius:999px;overflow:hidden;padding:10px 0;white-space:nowrap}
-.marquee{display:inline-block;white-space:nowrap;animation:jalan 18s linear infinite;font-weight:800;font-size:13px;letter-spacing:.3px}
+.marquee{display:inline-block;white-space:nowrap;animation:jalan 8s linear infinite;font-weight:800;font-size:13px;letter-spacing:.3px}
 @keyframes jalan{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
-.hero{margin:12px 16px 0;background:linear-gradient(135deg,#ff1e2d,#3b82f6 60%,#1a0003 100%);border-radius:22px;padding:22px 18px;position:relative;overflow:hidden;box-shadow:0 15px 40px rgba(59,130,246,.35)}
+.hero{margin:12px 16px 0;background:linear-gradient(270deg,#ff1e2d,#3b82f6,#1a0003,#ff1e2d);background-size:300% 300%;animation:gradMove 6s ease infinite;border-radius:22px;padding:22px 18px;position:relative;overflow:hidden;box-shadow:0 15px 40px rgba(59,130,246,.35)}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.45) 70%,rgba(0,0,0,.65));pointer-events:none}
 .hero h1,.hero p,.hero .stats{position:relative;z-index:2}
 .hero h1{font-size:30px;line-height:1.05;font-weight:900;text-shadow:0 3px 15px rgba(0,0,0,.5)}
@@ -43,23 +44,27 @@ body{background:#07070a;color:#fff;padding-bottom:110px;overflow-x:hidden}
 .sosmed{margin:12px 16px 0;display:flex;gap:8px}
 .sosmed a{flex:1;text-align:center;text-decoration:none;padding:13px;border-radius:14px;font-weight:900;font-size:13px}
 .sosmed .tk{background:#000;color:#fff;border:1px solid #333}
-.sosmed .ch{background:linear-gradient(90deg,#ff1e2d,#3b82f6);color:#fff}
+.sosmed .ch{background:linear-gradient(270deg,#ff1e2d,#3b82f6,#ffffff,#ff1e2d);background-size:300% 300%;animation:gradMove 3s ease infinite;color:#fff}
 .search{margin:12px 16px 0;display:flex;gap:8px}
 .search input{flex:1;background:rgba(20,20,27,.9);border:1px solid #2a2a35;color:#fff;padding:14px 16px;border-radius:999px;outline:none;font-size:13px}
 .tabs{display:flex;gap:8px;overflow:auto;padding:12px 16px;scrollbar-width:none}
 .tabs::-webkit-scrollbar{display:none}
 .tabs button{white-space:nowrap;background:rgba(20,20,27,.9);border:1px solid #2a2a35;color:#ddd;padding:10px 16px;border-radius:999px;font-weight:800;font-size:12px}
-.tabs button.active{background:linear-gradient(90deg,#ff1e2d,#3b82f6);color:#fff;box-shadow:0 0 15px rgba(59,130,246,.6)}
+.tabs button.active{background:linear-gradient(270deg,#ff1e2d,#3b82f6,#ffffff,#ff1e2d);background-size:300% 300%;animation:gradMove 3s ease infinite;color:#fff;box-shadow:0 0 15px rgba(59,130,246,.6)}
 .list{padding:4px 16px 0}
 .card{background:linear-gradient(180deg,rgba(24,24,31,.95),rgba(15,15,20,.95));border:1px solid #2b2b35;border-radius:22px;overflow:hidden;margin-bottom:16px;box-shadow:0 10px 30px rgba(0,0,0,.5);animation:up .5s both}
 @keyframes up{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
 .card-img{position:relative;height:230px;background:#222;overflow:hidden}
-.card-img img{width:100%;height:100%;object-fit:cover;display:block}
-.card-img .kat{position:absolute;top:12px;left:12px;background:linear-gradient(90deg,#ff1e2d,#3b82f6);color:#fff;font-size:11px;font-weight:900;padding:6px 12px;border-radius:999px;z-index:3}
+.card-img img{width:100%;height:100%;object-fit:cover;display:block;position:relative;z-index:2}
+.img-fallback{position:absolute;inset:0;z-index:1;background:linear-gradient(135deg,#ff1e2d,#3b82f6 55%,#111);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px}
+.img-fallback b{font-size:28px;line-height:1.1;text-shadow:0 3px 15px rgba(0,0,0,.6)}
+.img-fallback span{font-size:11px;background:rgba(0,0,0,.45);padding:6px 12px;border-radius:999px;margin-top:10px;font-weight:900;letter-spacing:1px}
+.card-img .kat{position:absolute;top:12px;left:12px;background:linear-gradient(270deg,#ff1e2d,#3b82f6,#ff1e2d);background-size:200% 200%;animation:gradMove 3s ease infinite;color:#fff;font-size:11px;font-weight:900;padding:6px 12px;border-radius:999px;z-index:3}
 .card-img .stock{position:absolute;top:12px;right:12px;background:#00c853;color:#fff;font-size:10px;font-weight:900;padding:6px 10px;border-radius:999px;z-index:3}
-.card-img .grad{position:absolute;bottom:0;left:0;right:0;height:90px;background:linear-gradient(transparent,rgba(0,0,0,.3) 30%,#0f0f14);z-index:1}
-.card-img .title-on-img{position:absolute;bottom:10px;left:14px;right:14px;z-index:2;font-size:15px;font-weight:900;text-transform:uppercase;line-height:1.2;text-shadow:0 2px 12px #000}
+.card-img .grad{position:absolute;bottom:0;left:0;right:0;height:90px;background:linear-gradient(transparent,rgba(0,0,0,.3) 30%,#0f0f14);z-index:4;pointer-events:none}
+.card-img .title-on-img{position:absolute;bottom:10px;left:14px;right:14px;z-index:5;font-size:15px;font-weight:900;text-transform:uppercase;line-height:1.2;text-shadow:0 2px 12px #000}
 .card-body{padding:14px}
+.theme-badge{display:inline-block;background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.5);color:#7ab8ff;font-size:11px;font-weight:800;padding:5px 10px;border-radius:999px;margin-bottom:8px}
 .spec-row{display:flex;gap:8px;margin:8px 0}
 .spec-row div{flex:1;background:#1e1e28;border:1px solid #2a2a35;border-radius:10px;padding:9px 8px;text-align:center}
 .spec-row b{font-size:11px;display:block;background:linear-gradient(90deg,#fff,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
@@ -67,10 +72,10 @@ body{background:#07070a;color:#fff;padding-bottom:110px;overflow-x:hidden}
 .price-row{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
 .price-row .p{font-size:18px;font-weight:900;line-height:1.1;background:linear-gradient(90deg,#00e676,#3b82f6,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .price-row .p small{display:block;color:#888;font-size:11px;font-weight:400;-webkit-text-fill-color:#888}
-.btn-order{background:linear-gradient(135deg,#ff1e2d,#3b82f6,#fff 180%);color:#fff;border:none;padding:12px 20px;border-radius:999px;font-weight:900;font-size:13px;box-shadow:0 0 18px rgba(59,130,246,.55)}
+.btn-order{background:linear-gradient(270deg,#ff1e2d,#3b82f6,#ffffff,#ff1e2d);background-size:300% 300%;animation:gradMove 2.5s ease infinite;color:#fff;border:none;padding:12px 20px;border-radius:999px;font-weight:900;font-size:13px;box-shadow:0 0 18px rgba(59,130,246,.55)}
 .bottom{position:fixed;bottom:0;left:0;right:0;background:rgba(10,10,15,.92);backdrop-filter:blur(12px);border-top:1px solid rgba(255,255,255,.08);padding:12px 16px;display:flex;gap:8px;z-index:20}
 .bottom button{flex:1;padding:14px;border-radius:999px;border:none;font-weight:900;cursor:pointer}
-.bottom .chat{background:linear-gradient(90deg,#00e676,#3b82f6);color:#fff}
+.bottom .chat{background:linear-gradient(270deg,#00e676,#3b82f6,#00e676);background-size:200% 200%;animation:gradMove 3s ease infinite;color:#fff}
 .drawer{position:fixed;inset:0;z-index:99;display:none}
 .drawer.show{display:block}
 .drawer-bg{position:absolute;inset:0;background:rgba(0,0,0,.6);backdrop-filter:blur(4px)}
@@ -78,19 +83,21 @@ body{background:#07070a;color:#fff;padding-bottom:110px;overflow-x:hidden}
 .drawer-box h3{font-size:16px;margin:10px 0 4px}
 .drawer-box p{font-size:12px;color:#999;line-height:1.5}
 .drawer-item{width:100%;text-align:left;background:#1e1e2a;border:1px solid #2a2a35;color:#fff;padding:13px;border-radius:12px;margin-top:10px;font-weight:700;cursor:pointer}
-.drawer-item.active{background:linear-gradient(90deg,#ff1e2d,#3b82f6)}
+.drawer-item.active{background:linear-gradient(270deg,#ff1e2d,#3b82f6,#ff1e2d);background-size:200% 200%;animation:gradMove 3s ease infinite}
 .hist-item{background:#1e1e2a;border:1px solid #2a2a35;border-radius:12px;padding:11px;margin-top:10px;font-size:12px;line-height:1.6}
 .hist-item b{color:#00e676}
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(6px);z-index:100;display:none;align-items:end;justify-content:center}
 .modal.show{display:flex}
 .box{background:#15151d;width:100%;max-width:520px;border-radius:26px 26px 0 0;padding:16px;max-height:92vh;overflow:auto}
-.box-img-wrap{position:relative;border-radius:16px;overflow:hidden}
-.box-img-wrap img{width:100%;display:block;border:1px solid #333}
+.box-img-wrap{position:relative;border-radius:16px;overflow:hidden;min-height:200px;background:linear-gradient(135deg,#ff1e2d,#3b82f6);display:flex;align-items:center;justify-content:center}
+.box-img-wrap img{width:100%;display:block;border:1px solid #333;position:relative;z-index:2}
+.box-img-wrap .fb{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:16px;z-index:1}
+.box-img-wrap .fb b{font-size:24px}
 .box h2{font-size:17px;margin:10px 0 6px;text-transform:uppercase;line-height:1.3}
 .spec{background:#1e1e2a;border:1px solid #2a2a35;border-radius:14px;padding:12px;margin:10px 0;font-size:13px;line-height:1.7}
 .opt{display:flex;gap:8px;margin:12px 0}
 .opt button{flex:1;padding:14px;border-radius:14px;border:1px solid #444;background:#222;color:#fff;font-weight:800;cursor:pointer}
-.opt button.active{background:linear-gradient(90deg,#ff1e2d,#3b82f6);color:#fff}
+.opt button.active{background:linear-gradient(270deg,#ff1e2d,#3b82f6,#ff1e2d);background-size:200% 200%;animation:gradMove 3s ease infinite;color:#fff}
 .wa{width:100%;padding:14px;border-radius:14px;border:none;font-weight:900;margin-top:8px;cursor:pointer}
 .login-wrap{position:fixed;inset:0;z-index:200;background:#07070a;display:none;align-items:center;justify-content:center;padding:20px}
 .login-wrap.show{display:flex}
@@ -100,6 +107,7 @@ body{background:#07070a;color:#fff;padding-bottom:110px;overflow-x:hidden}
 .google-btn{width:100%;margin-top:18px;background:#fff;color:#000;border:none;padding:14px;border-radius:999px;font-weight:900;display:flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;font-size:14px}
 .google-btn span{width:20px;height:20px;border-radius:50%;background:conic-gradient(#ea4335 0 25%,#4285f4 0 50%,#34a853 0 75%,#fbbc05 0);display:inline-block}
 .login-card input{width:100%;margin-top:12px;background:#222;border:1px solid #333;color:#fff;padding:13px 14px;border-radius:12px;outline:none}
+.badge-lock{display:inline-block;background:#ff1e2d;color:#fff;font-size:10px;font-weight:900;padding:5px 10px;border-radius:999px;margin-top:8px}
 </style>
 </head>
 <body>
@@ -108,10 +116,12 @@ body{background:#07070a;color:#fff;padding-bottom:110px;overflow-x:hidden}
 <div class="login-card">
 <div style="font-size:40px">🔥</div>
 <h1>NATTZYN <span class="grad-text">DEVELOPER STORE</span></h1>
-<p>Login dulu bree pake akun Google kamu,<br>baru bisa liat katalog nya 🙏</p>
-<button class="google-btn" onclick="googleLogin()"><span></span> Lanjutkan dengan Google</button>
-<input id="gmailInput" placeholder="Contoh: nama@gmail.com (buat demo login)">
-<p style="font-size:11px;margin-top:10px">Hanya memerlukan akun Google • Gak perlu password • Sekali login, gak perlu login lagi</p>
+<p>Website ini khusus member terdaftar.<br>Silahkan <b style="color:#fff">DAFTAR</b> dulu pake akun Google kamu, baru bisa masuk 🙏</p>
+<div class="badge-lock">🔒 KHUSUS MEMBER TERDAFTAR</div>
+<input id="namaInput" placeholder="Nama lengkap kamu">
+<input id="gmailInput" placeholder="Email Google kamu - contoh: nama@gmail.com">
+<button class="google-btn" onclick="daftarGoogle()"><span></span> Daftar dengan Google</button>
+<p style="font-size:11px;margin-top:12px">Hanya Gmail • 1x Daftar, langsung masuk • Keluar web gak perlu login lagi</p>
 </div>
 </div>
 <div class="top">
@@ -129,8 +139,8 @@ body{background:#07070a;color:#fff;padding-bottom:110px;overflow-x:hidden}
 <a class="tk" id="tiktokBtn" href="#" target="_blank">🎵 TikTok NATTZYN</a>
 <a class="ch" id="channelBtn" href="#" target="_blank">📢 Saluran WA</a>
 </div>
-<div class="search"><input id="q" oninput="render()" placeholder="🔍 Cari KATALOG 1, carlo, black, rooftop..."></div>
-<div class="tabs"><button class="active" onclick="filterCat('all',this)">🔥 Semua</button><button onclick="filterCat('carlo',this)">Carlo</button><button onclick="filterCat('black',this)">Black</button><button onclick="filterCat('rooftop',this)">Rooftop</button><button onclick="filterCat('street',this)">Street</button></div>
+<div class="search"><input id="q" oninput="render()" placeholder="🔍 Cari gaya: carlo, street, elegan, tanpanama..."></div>
+<div class="tabs"><button class="active" onclick="filterCat('all',this)">🔥 Semua Desain</button><button onclick="filterCat('layout',this)">📐 Desain: Layout</button><button onclick="filterCat('rooftop',this)">🏠 Desain: Rooftop</button><button onclick="filterCat('indoors',this)">🛋️ Desain: Indoors</button></div>
 <div class="list" id="list"></div>
 <div class="bottom"><button onclick="copyLink()">📋 Copy Link</button><button class="chat" onclick="openModal(null)">💬 Chat Admin</button></div>
 <div class="drawer" id="drawer"><div class="drawer-bg" onclick="toggleDrawer(false)"></div>
@@ -145,7 +155,6 @@ body{background:#07070a;color:#fff;padding-bottom:110px;overflow-x:hidden}
 </div></div>
 <div class="modal" id="modal" onclick="if(event.target===this) closeModal()"><div class="box"><div id="m"></div><div class="opt"><button id="bNo" class="active" onclick="setV('no')">LAYOUT ONLY</button><button id="bFull" onclick="setV('full')">FULL SYSTEM</button></div><div id="vp" style="font-weight:900;font-size:19px;color:#00e676"></div><button class="wa grad-btn" onclick="go('1')">💬 PESAN VIA WA - OWNER</button><button class="wa" style="background:#fff;color:#000" onclick="go('2')">💬 PESAN VIA WA - ADMIN</button><button class="wa" style="background:#222;color:#fff" onclick="closeModal()">Tutup</button></div></div>
 <script>
-// ===== LINK LU BREE - UDAH FINAL =====
 const TIKTOK_URL = "https://www.tiktok.com/@nattzynstudioproject";
 const CHANNEL_URL = "https://whatsapp.com/channel/0029Vb7KUf4LCoWwhNH7ko27";
 const WA1="6285929989335";
@@ -153,43 +162,46 @@ const WA2="6283827661600";
 document.getElementById('tiktokBtn').href = TIKTOK_URL;
 document.getElementById('channelBtn').href = CHANNEL_URL;
 const P=[
-{id:1,kat:"KATALOG 1",cat:"carlo",short:"SEMI CARLO",name:"NEW STOCK LAYOUT NATTZYN SEMI CARLO",ukuran:"14,5 x 9,5",device:"Ringan - Mobile Friendly",support:"Studio Lite / Studio Roblox",no:85000,full:150000,img:"foto1.jpg"},
-{id:2,kat:"KATALOG 2",cat:"carlo",short:"CARLO V2",name:"NEW STOCK LAYOUT NATTZYN TEMA CARLO V2",ukuran:"15,5 x 13,5",device:"Ringan - Mobile Friendly",support:"Studio Lite / Studio Roblox",no:100000,full:180000,img:"foto2.jpg"},
-{id:3,kat:"KATALOG 3",cat:"black",short:"BLACK STREET",name:"NEW STOCK LAYOUT NATTZYN BLACK STREET",ukuran:"Black Street",device:"Ringan - Mobile Friendly",support:"Studio Lite / Studio Roblox",no:100000,full:150000,img:"foto3.jpg"},
-{id:4,kat:"KATALOG 4",cat:"rooftop",short:"ROOFTOP ELEGAN",name:"NEW STOCK LAYOUT NATTZYN TEMA ROOFTOP ELEGAN",ukuran:"Rooftop Elegan",device:"Mobile Friendly",support:"Studio Lite / Studio Roblox",no:60000,full:100000,img:"foto4.jpg"},
-{id:5,kat:"KATALOG 5",cat:"rooftop",short:"ROOFTOP STREET",name:"NEW STOCK LAYOUT NATTZYN TEMA ROOFTOP STREET",ukuran:"Rooftop + Street",device:"Ringan - Mobile Friendly",support:"Studio Lite / Studio Roblox",no:120000,full:200000,img:"foto5.jpg"},
-{id:6,kat:"KATALOG 6",cat:"rooftop",short:"ROOFTOP X ROAD",name:"NEW STOCK LAYOUT NATTZYN TEMA ROOFTOP X ROAD",ukuran:"Rooftop X Road",device:"Ringan - Mobile Friendly",support:"Studio Lite / Studio Roblox",no:70000,full:100000,img:"foto6.jpg"},
-{id:7,kat:"KATALOG 7",cat:"black",short:"BLACK ELEGAN",name:"NEW STOCK LAYOUT NATTZYN TEMA BLACK ELEGAN",ukuran:"Black Elegan",device:"Ringan - Mobile Friendly",support:"Studio Lite / Studio Roblox",no:75000,full:110000,img:"foto7.jpg"},
-{id:8,kat:"KATALOG 8",cat:"rooftop",short:"TANPANAMA X ROOFTOP",name:"NEW STOCK LAYOUT NATTZYN TEMA TANPANAMA X ROOFTOP",ukuran:"Tanpanama X Rooftop",device:"Ringan - Mobile Friendly",support:"Studio Lite / Studio Roblox",no:100000,full:190000,img:"foto8.jpg"},
-{id:9,kat:"KATALOG 9",cat:"street",short:"STREET ROOFTOP",name:"NEW STOCK LAYOUT NATTZYN TEMA STREET ROOFTOP",ukuran:"Street Rooftop",device:"Ringan - Mobile Friendly",support:"Studio Lite / Studio Roblox",no:85000,full:100000,img:"foto9.jpg"},
+{id:1,kat:"KATALOG 1",cat:"layout",tema:"CARLO",short:"SEMI CARLO",name:"NEW STOCK LAYOUT NATTZYN SEMI CARLO",ukuran:"14,5 x 9,5",device:"Ringan - Mobile Friendly",support:"Studio Lite / Studio Roblox",no:85000,full:150000,img:"foto1.jpg"},
+{id:2,kat:"KATALOG 2",cat:"layout",tema:"CARLO",short:"CARLO V2",name:"NEW STOCK LAYOUT NATTZYN TEMA CARLO V2",ukuran:"15,5 x 13,5",device:"Ringan - Mobile Friendly",support:"Studio Lite / Studio Roblox",no:100000,full:180000,img:"foto2.jpg"},
+{id:3,kat:"KATALOG 3",cat:"layout",tema:"STREET",short:"BLACK STREET",name:"NEW STOCK LAYOUT NATTZYN BLACK STREET",ukuran:"Black Street",device:"Ringan - Mobile Friendly",support:"Studio Lite / Studio Roblox",no:100000,full:150000,img:"foto3.jpg"},
+{id:4,kat:"KATALOG 4",cat:"indoors",tema:"ELEGAN",short:"ROOFTOP ELEGAN",name:"NEW STOCK LAYOUT NATTZYN TEMA ROOFTOP ELEGAN",ukuran:"Rooftop Elegan",device:"Mobile Friendly",support:"Studio Lite / Studio Roblox",no:60000,full:100000,img:"foto4.jpg"},
+{id:5,kat:"KATALOG 5",cat:"rooftop",tema:"STREET",short:"ROOFTOP STREET",name:"NEW STOCK LAYOUT NATTZYN TEMA ROOFTOP STREET",ukuran:"Rooftop + Street",device:"Ringan - Mobile Friendly",support:"Studio Lite / Studio Roblox",no:120000,full:200000,img:"foto5.jpg"},
+{id:6,kat:"KATALOG 6",cat:"rooftop",tema:"ROAD",short:"ROOFTOP X ROAD",name:"NEW STOCK LAYOUT NATTZYN TEMA ROOFTOP X ROAD",ukuran:"Rooftop X Road",device:"Ringan - Mobile Friendly",support:"Studio Lite / Studio Roblox",no:70000,full:100000,img:"foto6.jpg"},
+{id:7,kat:"KATALOG 7",cat:"indoors",tema:"ELEGAN",short:"BLACK ELEGAN",name:"NEW STOCK LAYOUT NATTZYN TEMA BLACK ELEGAN",ukuran:"Black Elegan",device:"Ringan - Mobile Friendly",support:"Studio Lite / Studio Roblox",no:75000,full:110000,img:"foto7.jpg"},
+{id:8,kat:"KATALOG 8",cat:"rooftop",tema:"TANPANAMA",short:"TANPANAMA X ROOFTOP",name:"NEW STOCK LAYOUT NATTZYN TEMA TANPANAMA X ROOFTOP",ukuran:"Tanpanama X Rooftop",device:"Ringan - Mobile Friendly",support:"Studio Lite / Studio Roblox",no:100000,full:190000,img:"foto8.jpg"},
+{id:9,kat:"KATALOG 9",cat:"rooftop",tema:"STREET",short:"STREET ROOFTOP",name:"NEW STOCK LAYOUT NATTZYN TEMA STREET ROOFTOP",ukuran:"Street Rooftop",device:"Ringan - Mobile Friendly",support:"Studio Lite / Studio Roblox",no:85000,full:100000,img:"foto9.jpg"},
 ];
 let sel=null,v='no',curCat='all';
 function rp(n){return 'Rp '+n.toLocaleString('id-ID')}
 function getUser(){try{return JSON.parse(localStorage.getItem('nattzyn_user')||'null')}catch(e){return null}}
 function checkLogin(){let u=getUser();if(!u){document.getElementById('loginWrap').classList.add('show')}else{document.getElementById('loginWrap').classList.remove('show');document.getElementById('userName').innerText=u.name;document.getElementById('userEmail').innerText=u.email;document.getElementById('ava').innerText=u.name.charAt(0).toUpperCase();document.getElementById('ava2').innerText=u.name.charAt(0).toUpperCase();}}
-function googleLogin(){let em=document.getElementById('gmailInput').value.trim();if(!em||!em.includes('@')){em='user@gmail.com';}let name=em.split('@')[0];let u={name:name,email:em,loginAt:new Date().toLocaleString('id-ID')};localStorage.setItem('nattzyn_user',JSON.stringify(u));checkLogin();alert('Selamat datang '+name+'! Login Google berhasil 🙏');}
-function logout(){if(confirm('Mau logout bree?')){localStorage.removeItem('nattzyn_user');checkLogin();toggleDrawer(false);}}
+function daftarGoogle(){let nama=document.getElementById('namaInput').value.trim();let em=document.getElementById('gmailInput').value.trim();if(!em||!em.includes('@')||!em.toLowerCase().includes('gmail.com')){alert('Bree, pake Gmail yang bener ya! Contoh: nama@gmail.com');return;}if(!nama){nama=em.split('@')[0];}let u={name:nama,email:em,loginAt:new Date().toLocaleString('id-ID'),status:'TERDAFTAR'};localStorage.setItem('nattzyn_user',JSON.stringify(u));checkLogin();alert('Berhasil Daftar! Selamat datang '+nama+' 🙏 Kamu udah jadi member NATTZYN!');}
+function logout(){if(confirm('Mau logout bree? Nanti harus daftar / masuk lagi ya!')){localStorage.removeItem('nattzyn_user');checkLogin();toggleDrawer(false);}}
 function filterCat(c,btn){curCat=c;document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');render()}
-function render(){let q=document.getElementById('q').value.toLowerCase();let list=P.filter(p=>(curCat==='all'||p.cat===curCat||p.name.toLowerCase().includes(curCat))&&(p.kat+' '+p.name).toLowerCase().includes(q));document.getElementById('list').innerHTML=list.map(p=>`
+function render(){let q=document.getElementById('q').value.toLowerCase();let list=P.filter(p=>(curCat==='all'||p.cat===curCat)&&(p.kat+' '+p.name+' '+p.cat+' '+p.tema).toLowerCase().includes(q));document.getElementById('list').innerHTML=list.map(p=>`
 <div class="card" style="animation-delay:${p.id*0.05}s">
-<div class="card-img" onclick="openModal(${p.id})"><span class="kat">${p.kat}</span><span class="stock">NEW STOCK 🔥</span><img src="${p.img}" onerror="this.style.display='none'"><div class="grad"></div><div class="title-on-img">${p.short}</div></div>
+<div class="card-img" onclick="openModal(${p.id})">
+<div class="img-fallback"><div style="font-size:40px">🔥</div><b>${p.short}</b><span>${p.kat} • ${p.tema} • ${p.cat.toUpperCase()}</span></div>
+<span class="kat">${p.kat} • DESAIN: ${p.cat.toUpperCase()}</span><span class="stock">NEW STOCK 🔥</span><img src="${p.img}" onerror="this.style.display='none'" alt="${p.short}"><div class="grad"></div><div class="title-on-img">${p.short}</div></div>
 <div class="card-body">
+<div class="theme-badge">🎨 GAYA / TEMA: ${p.tema} &nbsp;|&nbsp; 📐 DESAIN: ${p.cat.toUpperCase()}</div>
 <div class="spec-row"><div><b>📐 ${p.ukuran}</b><small>UKURAN</small></div><div><b>📱 RINGAN</b><small>MOBILE FRIENDLY</small></div><div><b>🛠️ STUDIO</b><small>LITE / ROBLOX</small></div></div>
 <div class="price-row"><div class="p">${rp(p.no)} - ${rp(p.full)}<small>LAYOUT ONLY ${rp(p.no)} • FULL ${rp(p.full)}</small></div><button class="btn-order" onclick="openModal(${p.id})">ORDER →</button></div>
 </div>
 </div>`).join('')||'<p style="text-align:center;color:#888;padding:20px">Gak ketemu bree</p>'}
-function openModal(id){sel=id;v='no';upd();let p=id?P.find(x=>x.id===id):null;document.getElementById('m').innerHTML=p?`<div class="box-img-wrap"><img src="${p.img}"></div><span style="background:linear-gradient(90deg,#ff1e2d,#3b82f6);padding:5px 10px;border-radius:999px;font-size:11px;font-weight:900">${p.kat}</span><h2 class="grad-text">${p.name}</h2><div class="spec"><b>Katalog :</b> ${p.kat}<br><b>Ukuran :</b> ${p.ukuran}<br><b>Device :</b> ${p.device}<br><b>Support :</b> ${p.support}<br><b>Price :</b> ${rp(p.no)} Layout Only / ${rp(p.full)} Full System</div><p>✅ File Layout Bersih<br>✅ Support Studio Lite & Roblox<br>✅ Mobile Friendly - Ringan</p>`:`<h2>SELAMAT DATANG DI NATTZYN DEVELOPER STORE</h2><p>Silahkan pilih katalog nya, kalau suka langsung chat admin. Terimakasih 🙏</p>`;updPrice();document.getElementById('modal').classList.add('show')}
+function openModal(id){sel=id;v='no';upd();let p=id?P.find(x=>x.id===id):null;document.getElementById('m').innerHTML=p?`<div class="box-img-wrap"><div class="fb"><div style="font-size:40px">🔥</div><b>${p.short}</b><span style="font-size:12px;background:rgba(0,0,0,.4);padding:6px 12px;border-radius:999px;margin-top:8px">${p.kat} • ${p.tema}</span></div><img src="${p.img}" onerror="this.style.display='none'" alt="${p.short}"></div><span style="background:linear-gradient(270deg,#ff1e2d,#3b82f6,#ff1e2d);background-size:200% 200%;animation:gradMove 3s ease infinite;padding:5px 10px;border-radius:999px;font-size:11px;font-weight:900">${p.kat} • DESAIN: ${p.cat.toUpperCase()}</span><h2 class="grad-text">${p.name}</h2><div class="spec"><b>Katalog :</b> ${p.kat}<br><b>Desain :</b> ${p.cat.toUpperCase()}<br><b>Gaya / Tema :</b> ${p.tema}<br><b>Ukuran :</b> ${p.ukuran}<br><b>Device :</b> ${p.device}<br><b>Support :</b> ${p.support}<br><b>Price :</b> ${rp(p.no)} Layout Only / ${rp(p.full)} Full System</div><p>✅ File Layout Bersih<br>✅ Support Studio Lite & Roblox<br>✅ Mobile Friendly - Ringan</p>`:`<h2>SELAMAT DATANG DI NATTZYN DEVELOPER STORE</h2><p>Silahkan pilih katalog nya, kalau suka langsung chat admin. Terimakasih 🙏</p>`;updPrice();document.getElementById('modal').classList.add('show')}
 function setV(x){v=x;upd();updPrice()}
 function upd(){document.getElementById('bNo').className=v==='no'?'active':'';document.getElementById('bFull').className=v==='full'?'active':''}
 function updPrice(){let p=sel?P.find(x=>x.id===sel):null;if(!p)return;document.getElementById('vp').innerHTML=(v==='no'?'LAYOUT ONLY - ':'FULL SYSTEM - ')+rp(v==='no'?p.no:p.full)}
 function closeModal(){document.getElementById('modal').classList.remove('show')}
 function toggleDrawer(open){document.getElementById('drawer').classList.toggle('show',open);if(open) showHist();}
 function showHist(){let h=JSON.parse(localStorage.getItem('nattzyn_history')||'[]');let html='<h3 style="margin-top:16px">🧾 Riwayat Orderan</h3>';if(!h.length) html+='<p style="margin-top:8px">Belum ada orderan bree. Klik ORDER di katalog, langsung masuk sini!</p>';else html+=h.map(x=>`<div class="hist-item"><b>${x.kat} - ${x.name}</b><br>📦 ${x.pilihan} • ${x.harga}<br>📅 ${x.tanggal}<br>👤 ${x.user}</div>`).join('');document.getElementById('drawerContent').innerHTML=html;}
-function showProfil(){let u=getUser();document.getElementById('drawerContent').innerHTML=`<h3 style="margin-top:16px">👤 Profil Saya</h3><div class="hist-item">Nama: <b>${u?u.name:'-'}</b><br>Email: ${u?u.email:'-'}<br>Login: ${u?u.loginAt:'-'}<br>Total Order: <b>${JSON.parse(localStorage.getItem('nattzyn_history')||'[]').length}</b></div>`;}
+function showProfil(){let u=getUser();document.getElementById('drawerContent').innerHTML=`<h3 style="margin-top:16px">👤 Profil Saya</h3><div class="hist-item">Nama: <b>${u?u.name:'-'}</b><br>Email: ${u?u.email:'-'}<br>Status: <b>${u?u.status:'-'}</b><br>Daftar: ${u?u.loginAt:'-'}<br>Total Order: <b>${JSON.parse(localStorage.getItem('nattzyn_history')||'[]').length}</b></div>`;}
 function saveHistory(p,lab,price){let u=getUser();let h=JSON.parse(localStorage.getItem('nattzyn_history')||'[]');h.unshift({kat:p.kat,name:p.name,pilihan:lab,harga:rp(price),tanggal:new Date().toLocaleString('id-ID'),user:u?u.email:'guest'});localStorage.setItem('nattzyn_history',JSON.stringify(h));}
-function go(a){let wa=a==='1'?WA1:WA2;let nm=a==='1'?'OWNER':'ADMIN';let p=sel?P.find(x=>x.id===sel):null;let price=p?(v==='no'?p.no:p.full):0;let lab=v==='no'?'LAYOUT ONLY':'FULL SYSTEM';if(p) saveHistory(p,lab,price);let msg=p?`Halo ${nm}! Saya mau ORDER:%0A%0A• ${p.kat}%0A• ${p.name}%0A• Ukuran: ${p.ukuran}%0A• Device: ${p.device}%0A• Support: ${p.support}%0A• Pilihan: ${lab}%0A• Harga: ${rp(price)}%0A%0AMohon konfirmasi & cara bayar ya. - Dari Katalog NATTZYN`:`Halo ${nm}! Saya dari NATTZYN DEVELOPER STORE, mau tanya katalog.`;window.open(`https://wa.me/${wa}?text=${msg}`,'_blank')}
+function go(a){let wa=a==='1'?WA1:WA2;let nm=a==='1'?'OWNER':'ADMIN';let p=sel?P.find(x=>x.id===sel):null;let price=p?(v==='no'?p.no:p.full):0;let lab=v==='no'?'LAYOUT ONLY':'FULL SYSTEM';if(p) saveHistory(p,lab,price);let msg=p?`Halo ${nm}! Saya mau ORDER:%0A%0A• ${p.kat}%0A• ${p.name}%0A• Desain: ${p.cat.toUpperCase()}%0A• Gaya / Tema: ${p.tema}%0A• Ukuran: ${p.ukuran}%0A• Device: ${p.device}%0A• Support: ${p.support}%0A• Pilihan: ${lab}%0A• Harga: ${rp(price)}%0A%0AMohon konfirmasi & cara bayar ya. - Dari Katalog NATTZYN`:`Halo ${nm}! Saya dari NATTZYN DEVELOPER STORE, mau tanya katalog.`;window.open(`https://wa.me/${wa}?text=${msg}`,'_blank')}
 function copyLink(){navigator.clipboard.writeText(location.href);alert('Link ke-copy!')}
 checkLogin();render();
 </script>
 </body>
-  </html>
+</html>
