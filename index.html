@@ -3,49 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NATTZYN STORE - Top Up Game Murah</title>
+<title>NATTZYN - Katalog Layout</title>
 <style>
-body{margin:0;font-family:Arial;background:#0f0f0f;color:white;text-align:center}
-header{background:#ff0055;padding:20px;font-size:24px;font-weight:bold}
-.hero{padding:30px 15px}
-.hero h1{font-size:28px}
-.hero p{color:#ccc}
-.btn{display:block;background:#ff0055;color:white;padding:15px;margin:10px 20px;border-radius:10px;text-decoration:none;font-weight:bold}
-.card{background:#1c1c1c;margin:15px;padding:15px;border-radius:10px;text-align:left}
-.card h3{margin:0}
-.price{color:#00ff88;font-weight:bold}
-footer{padding:20px;color:#888;font-size:12px}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#0b0e14;color:#fff}
+.top{padding:14px 16px;display:flex;justify-content:space-between;border-bottom:1px solid #222;position:sticky;top:0;background:#0b0e14;z-index:10}
+.top span{color:#8696a0;font-size:14px}
+.header{padding:14px 16px 4px}
+.header h1{font-size:17px}
+.header p{font-size:13px;color:#8696a0;margin-top:3px}
+.search{margin:10px 16px 0}
+.search input{width:100%;background:#1a1a1a;border:1px solid #2a2a2a;color:#fff;padding:12px 14px;border-radius:999px;outline:none}
+.list{padding:10px 0 100px}
+.item{display:flex;gap:12px;padding:14px 16px;border-bottom:1px solid #1f2a33;cursor:pointer}
+.item:active{background:#111}
+.item-left{flex:1;min-width:0}
+.item-left h3{font-size:14px;font-weight:700;line-height:1.3;text-transform:uppercase}
+.item-left p{font-size:12px;color:#8696a0;margin:4px 0;line-height:1.4}
+.price{font-size:14px;margin-top:6px;font-weight:700}
+.price small{display:block;font-weight:400;color:#8696a0;font-size:11px;margin-top:2px}
+.tag{display:inline-block;font-size:11px;font-weight:900;background:#ff1e2d;color:#fff;padding:4px 10px;border-radius:999px;margin-bottom:6px;letter-spacing:.5px}
+.tag2{display:inline-block;font-size:10px;font-weight:800;background:#00a884;color:#fff;padding:3px 8px;border-radius:999px;margin-top:6px;margin-left:6px}
+.thumb{width:76px;height:76px;min-width:76px;border-radius:10px;overflow:hidden;background:#222;position:relative}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb span{position:absolute;top:5px;left:5px;background:#ff1e2d;color:#fff;font-size:10px;font-weight:900;padding:3px 7px;border-radius:999px}
+.bottom{position:fixed;bottom:0;left:0;right:0;background:#111;padding:12px 16px;display:flex;gap:8px}
+.bottom button{flex:1;padding:12px;border-radius:999px;border:none;font-weight:700;cursor:pointer}
+.bottom .chat{background:#00a884;color:#fff}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:99;display:none;align-items:end;justify-content:center}
+.modal.show{display:flex}
+.box{background:#151515;width:100%;max-width:520px;border-radius:20px 20px 0 0;padding:16px;max-height:92vh;overflow:auto}
+.box img{width:100%;border-radius:12px;margin-bottom:10px}
+.box h2{font-size:16px;margin:6px 0;text-transform:uppercase;line-height:1.3}
+.spec{background:#1f2a33;border-radius:12px;padding:12px;margin:10px 0;font-size:13px;line-height:1.7}
+.opt{display:flex;gap:8px;margin:12px 0}
+.opt button{flex:1;padding:12px;border-radius:12px;border:1px solid #444;background:#222;color:#fff;font-weight:700;cursor:pointer}
+.opt button.active{background:#fff;color:#000}
+.wa{width:100%;padding:13px;border-radius:12px;border:none;font-weight:800;margin-top:8px;cursor:pointer}
 </style>
 </head>
 <body>
-<header>NATTZYN STORE</header>
-<div class="hero">
-<h1>Top Up Game Murah & Cepat</h1>
-<p>Proses 1 Menit - Aman 100% - Bayar QRIS / DANA / Pulsa</p>
-<a class="btn" href="https://wa.me/6280000000000">CHAT ADMIN DI WHATSAPP</a>
-</div>
-
-<div class="card">
-<h3>💎 Mobile Legends</h3>
-<p>86 Diamond - <span class="price">Rp 20.000</span></p>
-<p>172 Diamond - <span class="price">Rp 40.000</span></p>
-<p>257 Diamond - <span class="price">Rp 60.000</span></p>
-</div>
-
-<div class="card">
-<h3>🔥 Free Fire</h3>
-<p>100 Diamond - <span class="price">Rp 13.000</span></p>
-<p>310 Diamond - <span class="price">Rp 40.000</span></p>
-<p>520 Diamond - <span class="price">Rp 65.000</span></p>
-</div>
-
-<div class="card">
-<h3>🎮 PUBG Mobile</h3>
-<p>60 UC - <span class="price">Rp 13.000</span></p>
-<p>325 UC - <span class="price">Rp 65.000</span></p>
-</div>
-
-<a class="btn" href="https://wa.me/6280000000000">PESAN SEKARANG</a>
-<footer>© 2026 NATTZYN STORE - Medan</footer>
+<div class="top"><span>← Pengelola Katalog</span><b>⋮</b></div>
+<div class="header"><h1>NATTZYN COMMUNITY</h1><p>Katalog 1 - 9 • NEW STOCK • Layout Map Roblox Premium</p></div>
+<div class="search"><input id="q" oninput="render()" placeholder="Cari... KATALOG 1, carlo, black, rooftop"></div>
+<div class="list" id="list"></div>
+<div class="bottom"><button onclick="copyLink()">Copy Link</button><button class="chat" onclick="openModal(null)">Chat Admin</button></div>
+<div class="modal" id="modal" onclick="if(event.target===this) closeModal()"><div class="box"><div id="m"></div><div class="opt"><button id="bNo" class="active" onclick="setV('no')">LAYOUT ONLY</button><button id="bFull" onclick="setV('full')">FULL SYSTEM</button></div><div id="vp" style="font-weight:800;font-size:18px"></div><button class="wa" style="background:#00a884;color:#fff" onclick="go('1')">PESAN VIA WA - OWNER</button><button class="wa" style="background:#fff" onclick="go('2')">PESAN VIA WA - ADMIN</button><button class="wa" style="background:#222;color:#fff" onclick="closeModal()">Tutup</button></div></div>
+<script>
+const WA1="6285929989335";
+const WA2="6283827661600";
+const P=[
+{id:1,kat:"KATALOG 1",name:"NEW STOCK LAYOUT NATTZYN SEMI CARLO",ukuran:"Panjang > 14,5 | Lebar > 9,5",device:"Ringan - Mobile Friendly",support:"Studio Lite / Studio Roblox",no:85000,full:150000,img:"foto1.jpg"},
+{id:2,kat:"KATALOG 2",name:"NEW STOCK LAYOUT NATTZYN TEMA CARLO V2",ukuran:"Panjang > 15,5 | Lebar > 13,5",device:"Ringan - Mobile Friendly",support:"Studio Lite / Studio Roblox",no:100000,full:180000,img:"foto2.jpg"},
+{id:3,kat:"KATALOG 3",name:"NEW STOCK LAYOUT NATTZYN BLACK STREET",ukuran:"Black Street",device:"Ringan - Mobile Friendly",support:"Studio Lite / Studio Roblox",no:100000,full:150000,img:"foto3.jpg"},
+{id:4,kat:"KATALOG 4",name:"NEW STOCK LAYOUT NATTZYN TEMA ROOFTOP ELEGAN",ukuran:"Rooftop Elegan",device:"Mobile Friendly",support:"Studio Lite / Studio Roblox",no:60000,full:100000,img:"foto4.jpg"},
+{id:5,kat:"KATALOG 5",name:"NEW STOCK LAYOUT NATTZYN TEMA ROOFTOP STREET",ukuran:"Rooftop + Street",device:"Ringan - Mobile Friendly",support:"Studio Lite / Studio Roblox",no:120000,full:200000,img:"foto5.jpg"},
+{id:6,kat:"KATALOG 6",name:"NEW STOCK LAYOUT NATTZYN TEMA ROOFTOP X ROAD",ukuran:"Rooftop X Road",device:"Ringan - Mobile Friendly",support:"Studio Lite / Studio Roblox",no:70000,full:100000,img:"foto6.jpg"},
+{id:7,kat:"KATALOG 7",name:"NEW STOCK LAYOUT NATTZYN TEMA BLACK ELEGAN",ukuran:"Black Elegan",device:"Ringan - Mobile Friendly",support:"Studio Lite / Studio Roblox",no:75000,full:110000,img:"foto7.jpg"},
+{id:8,kat:"KATALOG 8",name:"NEW STOCK LAYOUT NATTZYN TEMA TANPANAMA X ROOFTOP",ukuran:"Tanpanama X Rooftop",device:"Ringan - Mobile Friendly",support:"Studio Lite / Studio Roblox",no:100000,full:190000,img:"foto8.jpg"},
+{id:9,kat:"KATALOG 9",name:"NEW STOCK LAYOUT NATTZYN TEMA STREET ROOFTOP",ukuran:"Street Rooftop",device:"Ringan - Mobile Friendly",support:"Studio Lite / Studio Roblox",no:85000,full:100000,img:"foto9.jpg"},
+];
+let sel=null,v='no';
+function rp(n){return 'Rp '+n.toLocaleString('id-ID')}
+function render(){let q=document.getElementById('q').value.toLowerCase();let list=P.filter(p=>(p.kat+' '+p.name).toLowerCase().includes(q));document.getElementById('list').innerHTML=list.map(p=>`
+<div class="item" onclick="openModal(${p.id})">
+<div class="item-left"><span class="tag">${p.kat}</span><h3>${p.name}</h3><p>Ukuran: ${p.ukuran}<br>Device: ${p.device}<br>Support: ${p.support}</p><div class="price">${rp(p.no)} - ${rp(p.full)}<small>LAYOUT ONLY ${rp(p.no)} • FULL SYSTEM ${rp(p.full)}</small></div><span class="tag2">NEW STOCK</span></div>
+<div class="thumb"><span>${p.kat}</span><img src="${p.img}" onerror="this.style.display='none'"></div>
+</div>`).join('')||'<p style="text-align:center;color:#888;padding:20px">Gak ketemu bree</p>'}
+function openModal(id){sel=id;v='no';upd();let p=id?P.find(x=>x.id===id):null;document.getElementById('m').innerHTML=p?`<img src="${p.img}"><span class="tag">${p.kat}</span><h2>${p.name}</h2><div class="spec"><b>Katalog :</b> ${p.kat}<br><b>Ukuran :</b> ${p.ukuran}<br><b>Device :</b> ${p.device}<br><b>Support :</b> ${p.support}<br><b>Price :</b> ${rp(p.no)} Layout Only / ${rp(p.full)} Full System</div><p>✅ File Layout Bersih<br>✅ Support Studio Lite & Roblox<br>✅ Mobile Friendly - Ringan</p>`:`<h2>Chat Admin NATTZYN</h2><p>Tanya-tanya layout dulu bree!</p>`;updPrice();document.getElementById('modal').classList.add('show')}
+function setV(x){v=x;upd();updPrice()}
+function upd(){document.getElementById('bNo').className=v==='no'?'active':'';document.getElementById('bFull').className=v==='full'?'active':''}
+function updPrice(){let p=sel?P.find(x=>x.id===sel):null;if(!p)return;document.getElementById('vp').innerHTML=(v==='no'?'LAYOUT ONLY - ':'FULL SYSTEM - ')+rp(v==='no'?p.no:p.full)}
+function closeModal(){document.getElementById('modal').classList.remove('show')}
+function go(a){let wa=a==='1'?WA1:WA2;let nm=a==='1'?'OWNER':'ADMIN';let p=sel?P.find(x=>x.id===sel):null;let price=p?(v==='no'?p.no:p.full):0;let lab=v==='no'?'LAYOUT ONLY':'FULL SYSTEM';let msg=p?`Halo ${nm}! Saya mau ORDER:%0A%0A• ${p.kat}%0A• ${p.name}%0A• Ukuran: ${p.ukuran}%0A• Device: ${p.device}%0A• Support: ${p.support}%0A• Pilihan: ${lab}%0A• Harga: ${rp(price)}%0A%0AMohon konfirmasi & cara bayar ya. - Dari Katalog NATTZYN`:`Halo ${nm}! Saya mau tanya katalog NATTZYN.`;window.open(`https://wa.me/${wa}?text=${msg}`,'_blank')}
+function copyLink(){navigator.clipboard.writeText(location.href);alert('Link ke-copy!')}
+render();
+</script>
 </body>
-</html>
+                                            </html>
